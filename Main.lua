@@ -1,4 +1,3 @@
--- Fill and Fix
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Players = game:GetService("Players")
@@ -230,7 +229,7 @@ local TeleportAllButton = TeleportTab:CreateButton({
    end,
 })
 
-local Tab = Window:CreateTab("Script Hubs", "box")
+local Tab = Window:CreateTab("Script Hubs", "boxes")
 
 local TeleportSection = TeleportTab:CreateSection("Script Hubs")
 TeleportSection:Set("Script Hubs")
@@ -238,7 +237,25 @@ TeleportSection:Set("Script Hubs")
 local Button = Tab:CreateButton({
    Name = "Btools",
    Callback = function()
-   
+    loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))();
    end,
 })
 
+local Button = Tab:CreateButton({
+   Name = "Dex-Explorer",
+   Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))();
+   end,
+})
+
+local Tab = Window:CreateTab("Source", "braces")
+
+local TeleportSection = TeleportTab:CreateSection("Source Code Link")
+TeleportSection:Set("Source Code Link")
+
+local Button = Tab:CreateButton({
+   Name = "Copy Src Link",
+   Callback = function()
+    setclipboard("https://raw.githubusercontent.com/Luacide/Random_Lua_Cheatpanel/refs/heads/main/Main.lua")
+   end,
+})
